@@ -24,27 +24,27 @@ func newMemStorage() *MemStorage {
 }
 
 type storage interface {
-	updateGauge(in_name string, in_value float64)
-	updateCounter(in_name string, in_value int64)
-	getGauge(in_name string) (float64, bool)
-	getCounter(in_name string) (int64, bool)
+	updateGauge(inName string, inValue float64)
+	updateCounter(inName string, inValue int64)
+	getGauge(inName string) (float64, bool)
+	getCounter(inName string) (int64, bool)
 }
 
-func (in_storage *MemStorage) updateGauge(in_name string, in_value float64) {
-	in_storage.gauge[in_name] = in_value
+func (inStorage *MemStorage) updateGauge(inName string, inValue float64) {
+	inStorage.gauge[inName] = inValue
 }
 
-func (in_storage *MemStorage) updateCounter(in_name string, in_value int64) {
-	in_storage.counter[in_name] = in_value
+func (inStorage *MemStorage) updateCounter(inName string, inValue int64) {
+	inStorage.counter[inName] = inValue
 }
 
-func (in_storage *MemStorage) getGauge(in_name string) (float64, bool) {
-	value, isOk := in_storage.gauge[in_name]
+func (inStorage *MemStorage) getGauge(inName string) (float64, bool) {
+	value, isOk := inStorage.gauge[inName]
 	return value, isOk
 }
 
-func (in_storage *MemStorage) getCounter(in_name string) (int64, bool) {
-	value, isOk := in_storage.counter[in_name]
+func (inStorage *MemStorage) getCounter(inName string) (int64, bool) {
+	value, isOk := inStorage.counter[inName]
 	return value, isOk
 }
 
