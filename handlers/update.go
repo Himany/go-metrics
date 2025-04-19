@@ -5,7 +5,7 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/Himany/go-metrics/cmd/server/storage"
+	"github.com/Himany/go-metrics/storage"
 )
 
 type UpdateHandler struct {

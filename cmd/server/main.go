@@ -3,9 +3,9 @@ package main
 import (
 	"log"
 
-	"github.com/Himany/go-metrics/cmd/server/handlers"
-	"github.com/Himany/go-metrics/cmd/server/server"
-	"github.com/Himany/go-metrics/cmd/server/storage"
+	"github.com/Himany/go-metrics/handlers"
+	"github.com/Himany/go-metrics/server"
+	"github.com/Himany/go-metrics/storage"
 )
 
 func main() {
